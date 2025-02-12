@@ -1,6 +1,6 @@
 'use client'
 
-import { type ForwardRefExoticComponent, RefAttributes, type FC, useState } from 'react'
+import { type ForwardRefExoticComponent, RefAttributes, type FC, useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { AudioLines, ChevronsUpDown, LayoutDashboard, LogOut, type LucideProps, Palette, Users } from 'lucide-react'
@@ -11,7 +11,8 @@ import {
 	SidebarHeader,
 	SidebarMenu,
 	SidebarMenuButton,
-	SidebarMenuItem
+	SidebarMenuItem,
+	useSidebar
 } from '@/components/ui/sidebar'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -124,6 +125,16 @@ const UserMenu: FC = () => {
 
 const AppSidebar: FC = () => {
 	const pathname = usePathname()
+	const { setOpen } = useSidebar()
+
+	useEffect(() => {
+		const handleResize = () => setOpen(window.innerWidth > 1280)
+		handleResize()
+
+		window.addEventListener('resize', handleResize)
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
+
 	return (
 		<Sidebar variant='sidebar' className='bg-white flex flex-col'>
 			<SidebarHeader className='px-6 h-16 flex justify-center items-center border-b bg-white'>
