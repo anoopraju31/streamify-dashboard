@@ -1,8 +1,8 @@
 'use client'
 
 import { type FC, type ReactNode, useRef } from 'react'
-import { Provider } from 'react-redux'
 import { makeStore, type AppStore } from '@/lib/store'
+import { Provider } from 'react-redux'
 
 type Props = {
 	children: ReactNode
