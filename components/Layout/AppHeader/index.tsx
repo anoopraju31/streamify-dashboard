@@ -12,20 +12,20 @@ const AppHeader: FC = () => {
 	return (
 		<div
 			className={cn(
-				'w-full h-16 p-6 flex justify-between items-center gap-6 bg-white border-b',
-				!open && 'pl-0 py-0'
+				'w-full h-16 px-4 sm:px-6 md:px-8 py-6 flex justify-between items-center gap-6 bg-white border-b sticky top-0 right-0 left-0',
+				!open && 'lg:pl-0 lg:py-0'
 			)}
 		>
 			<div className='flex items-center gap-6'>
 				{!open && (
 					<Link
 						href='/'
-						className='w-64 h-16 flex justify-center items-center text-3xl font-semibold text-gray-950 border-r'
+						className='w-fit lg:w-64 lg:h-16 flex justify-center items-center text-3xl font-semibold text-gray-950 lg:border-r'
 					>
 						Streamify
 					</Link>
 				)}
-				<div className='text-xl font-medium text-gray-950'>Hello Anoop</div>
+				<div className=' hidden lg:block text-xl font-medium text-gray-950'>Hello Anoop</div>
 			</div>
 
 			<Button onClick={toggleSidebar} variant='ghost' className='w-12 h-12 text-gray-950 rounded-full p-2'>
