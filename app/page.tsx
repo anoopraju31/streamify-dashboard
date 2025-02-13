@@ -5,10 +5,10 @@ import { type FC } from 'react'
 
 const HomePage: FC = () => {
 	return (
-		<main className='w-full p-4 sm:p-6 md:p-8 flex flex-col gap-6'>
-			<div className='w-full grid grid-cols-1 lg:grid-cols-3 grid-rows-2 lg:grid-rows-1 gap-6'>
-				<div className='w-full lg:col-span-2 flex flex-col gap-6'>
-					<div className='w-full p-0.5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 grid-row-6 sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-3 xl:grid-rows-2 gap-6'>
+		<main className='w-full p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-6'>
+			<div className='w-full grid grid-cols-1 lg:grid-cols-3 grid-rows-2 lg:grid-rows-1 gap-4 md:gap-6'>
+				<div className='w-full lg:col-span-2 flex flex-col gap-4 md:gap-6'>
+					<div className='w-full p-0.5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 grid-row-6 sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-3 xl:grid-rows-2 gap-4 md:gap-6'>
 						<Card>
 							<CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
 								<CardTitle className='text-sm font-medium'>Total Revenue</CardTitle>
